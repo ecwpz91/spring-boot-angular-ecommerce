@@ -81,6 +81,9 @@ public class OrderController {
             .getId())))
           .collect(Collectors.toList());
 
+          if (!CollectionUtils.isEmpty(list)) {
+              new ResourceNotFoundException("Product not found");
+          }
     }
 
     public static class OrderForm {
