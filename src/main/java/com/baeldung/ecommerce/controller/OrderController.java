@@ -25,8 +25,6 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/orders")
 public class OrderController {
 
-    public static String PASSWORD = "HARDCODED_PASSWORD-DELETE-ME!!!";
-
     ProductService productService;
     OrderService orderService;
     OrderProductService orderProductService;
