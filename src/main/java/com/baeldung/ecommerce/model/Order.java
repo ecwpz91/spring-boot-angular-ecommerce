@@ -2,7 +2,6 @@ package com.baeldung.ecommerce.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
@@ -30,9 +29,10 @@ public class Order {
 
     @Transient
     public Double getTotalOrderPrice() {
-        double sum = 0D;
-        List<OrderProduct> orderProducts = getOrderProducts();
-        for (OrderProduct op : orderProducts) {
+        double sum = 0D;        
+        List<OrderProduct> orderPrds = getOrderProducts();
+        
+        for (OrderProduct op : orderPrds) {
             sum += op.getTotalPrice();
         }
 
