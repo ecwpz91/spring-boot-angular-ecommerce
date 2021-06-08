@@ -18,14 +18,14 @@ public class Product {
 
     private String pictureUrl;
 
+    public Product() {
+    }
+
     public Product(Long id, @NotNull(message = "Product name is required.") String name, Double price, String pictureUrl) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.pictureUrl = pictureUrl;
-    }
-
-    public Product() {
     }
 
     public Long getId() {
@@ -58,5 +58,13 @@ public class Product {
 
     public void setPictureUrl(String pictureUrl) {
         this.pictureUrl = pictureUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                ", name='" + name + '\'' +
+                ", Price=" + price +
+                '}';
     }
 }
