@@ -65,6 +65,11 @@
       <version>3.23.1-GA</version>
     </dependency>
     <!-- <dependency>
+      <groupId>io.opentracing.contrib</groupId>
+      <artifactId>opentracing-spring-jaeger-web-starter</artifactId>
+      <version>3.3.1</version>
+    </dependency> -->
+    <!-- <dependency>
       <groupId>com.microsoft.sqlserver</groupId>
       <artifactId>mssql-jdbc</artifactId>
       <version>9.2.1.jre8</version>
